@@ -1,0 +1,21 @@
+.body{
+  min-height: 100vh;
+  display : flex;
+  flex-direction: column;
+}
+
+
+.yield {
+  flex-grow: 1;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center
+}
+
+.footer-copyright {
+  text-align: center;
+}
