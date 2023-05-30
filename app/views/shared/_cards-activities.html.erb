@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="activities">
+    <div class="cards">
+      <% @activities.each do |activity| %>
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+        <div class="cards-infos">
+          <div>
+            <%= <h2> link_to activity.name, activity_path(activity) </h2> %>
+            <%= <p>activity.summary</p> %>
+          </div>
+          <%=  <h2 class="cards-pricing">£activity.price</h2> %>
+          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="cards-user avatar-bordered" />
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
