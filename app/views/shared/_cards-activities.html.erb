@@ -5,7 +5,7 @@
         <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
         <div class="cards-infos">
           <div>
-            <h2><%= link_to activity.title, root_path %></h2>
+            <h2><%= link_to activity.title, activity_path(activity) %></h2>
             <p><%= activity.summary %></p>
           </div>
           <h2 class="cards-pricing"> £<%= activity.price %></h2>
