@@ -7,19 +7,19 @@
 #   Character.create(name: "Luke", movie: movies.first)
 require 'faker'
 
-# puts "create 10 users"
+ puts "create 50 users"
 
-# 50.times do
-#   user = User.new(
-#     fullname: Faker::Movies::HarryPotter.character,
-#     email:    Faker::Internet.email,
-#     password: Faker::Internet.password(min_length: 8),
-#     age:      rand(11..236)
-#   )
-#   user.save
-# end
+50.times do
+  user = User.new(
+    fullname: Faker::Movies::HarryPotter.character,
+    email:    Faker::Internet.email,
+    password: Faker::Internet.password(min_length: 8),
+    age:      rand(11..236)
+  )
+  user.save
+end
 
-# puts "over"
+puts "over"
 
 puts "create activities"
   Activity.new(user_id: 40, title: "Quidditch training", theme: "Sports", price: "12", date: Date.new(2023,6,3), summary: "Come play with Harry", description: "Golden snitch catch training with Harry").save
