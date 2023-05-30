@@ -1,10 +1,10 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-    <%= image_tag "logo.png" %>
-    <%= "HOGWARTS ACADEMY" %>
-      <%# <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" /> %>
-    </a>
+  <div>
+    <%= link_to root_path, class: 'navbar-brand d-flex justify-content-center align-items-center' do %>
+      <%= image_tag 'logo.png' %>
+      <span>HOGWARTS ACADEMY</span>
+    <% end %>
+    </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -12,25 +12,24 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
+            <%= link_to 'Home', root_path, class: 'nav-link' %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">My bookings</a>
+            <%= link_to 'My Bookings', dashboards_path, class: 'nav-link' %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Muggles</a>
+            <%= link_to 'Add an activity', new_activity_path, class: 'nav-link' %>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Platform 9 ¾</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Poudlard Express</a>
+            <a class="nav-link" href="https://www.getyourguide.fr/poudlard-express-l91457/" target="_blank">Poudlard Express</a>
           </li>
           <li class="nav-item dropdown">
             <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://p9.storage.canalblog.com/93/69/1337059/102645311_o.jpg" />
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Admin</a>
-              <a class="dropdown-item" href="#">My profile</a>
+              <%= link_to 'My profile', dashboards_path, class: 'dropdown-item' %>
               <a class="dropdown-item" data-turbo-method="delete" href="#">Log out</a>
             </div>
           </li>
