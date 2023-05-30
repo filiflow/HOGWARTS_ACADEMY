@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   # post "activites",       to: "activities#create"
   # get "bookings/new" to: "bookings#new"
   # post "bookings", to: "bookings#create"
-  # get "dashboards", to: "dahsboard#index"
+  get "dashboards", to: "dashboards#index"
 end
