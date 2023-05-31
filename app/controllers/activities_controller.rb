@@ -16,7 +16,6 @@ class ActivitiesController < ApplicationController
     @activity = Activity.new(activity_params)
     @activity.id = current_user
     @activity.save
-    raise
     if @activity.save
       redirect_to activity_path(@activity)
     else
