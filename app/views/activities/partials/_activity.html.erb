@@ -3,7 +3,7 @@
     <img class="image-activity" src="https://images.unsplash.com/photo-1547756536-cde3673fa2e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2441&q=80" />
     <div class="card-activity-info">
       <div>
-        <h2><%= link_to activity.title, root_path %></h2>
+        <h2><%= link_to activity.title, activity_path(activity), method: :get %></h2>
         <p><%= activity.summary %></p>
       </div>
       <h2 class="cards-pricing"> £<%= activity.price %></h2>

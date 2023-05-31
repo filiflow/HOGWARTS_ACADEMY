@@ -1,13 +1,12 @@
-<img class="photo mb-3" src="https://aucomptoirdessorciers.fr/wp-content/uploads/2021/05/terrain-de-quidditch.jpg" />
 
-<div class="container">
+<div class="container" style="text-align: center">
   <div class="card-trip-infos">
-    <div>
+      <%= cl_image_tag @activity.photo.key, height: 300, width: 400, crop: :fill %>
       <h2><%= @activity.title %></h2>
       <p><%= @activity.theme %></p>
-      <p><%= @activity.date %></p>
+      <p>📅<%= @activity.date %></p>
       <p><%= @activity.description %></p>
-    </div>
-    <h2 class="card-trip-pricing"><%= @activity.price %></h2>
+      <h2 class="card-trip-pricing">💸<%= @activity.price %></h2>
+      <a class="btn btn-ghost d-grid gap-2 col-2 mx-auto" href="#">RESERVIUS🪄</a>
   </div>
 </div>

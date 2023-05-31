@@ -9,14 +9,8 @@ class ActivitiesController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.turbo_stream { render turbo_stream: turbo_stream.replace("activities", partial: "activities/activity", collection: @activities, as: :activity) }
+      format.turbo_stream { render turbo_stream: turbo_stream.update(:activities, partial: "activities/activity", collection: @activities, as: :activity) }
     end
-
-    # if turbo_frame_request?
-    #   render partial: "activities", locals: { activities: @activities }
-    # else
-    #   render "index"
-    # end
   end
 
   def show
@@ -41,6 +35,6 @@ class ActivitiesController < ApplicationController
   private
 
   def activity_params
-    params.require(:activity).permit(:title, :theme, :price, :date, :summary, :description)
+    params.require(:activity).permit(:title, :theme, :price, :date, :summary, :description, :photo)
   end
 end
