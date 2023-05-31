@@ -1,17 +1,11 @@
-
-<div class="photo">
-
-
-  <div class="container">
-    <div class="card-trip-infos">
-        <%= cl_image_tag @activity.photo.key, height: 300, width: 400, crop: :fill %>
-        <h2><%= @activity.title %></h2>
-        <p><%= @activity.theme %></p>
-        <p><%= @activity.date %></p>
-        <p><%= @activity.description %></p>
-        <h2 class="card-trip-pricing"><%= @activity.price %></h2>
-        <a class="btn btn-ghost d-grid gap-2 col-2 mx-auto" href="#">RESERVIUS🪄</a>
-    </div>
+<div class="container" style="text-align: center">
+  <div class="card-trip-infos">
+      <%= cl_image_tag @activity.photo.key, height: 300, width: 400, crop: :fill %>
+      <h2><%= @activity.title %></h2>
+      <p><%= @activity.theme %></p>
+      <p>📅<%= @activity.date %></p>
+      <p><%= @activity.description %></p>
+      <h2 class="card-trip-pricing">💸<%= @activity.price %></h2>
+      <a class="btn btn-ghost d-grid gap-2 col-2 mx-auto" href="#">RESERVIUS🪄</a>
   </div>
-
 </div>
