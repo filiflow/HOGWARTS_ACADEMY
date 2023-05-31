@@ -1,10 +1,13 @@
 <div class="container mt-5 mb-3">
 
-  <h2 class="mb-4">Welcome, <%= current_user.fullname %></h2>
+   <h2 id="welcome" class="mb-4"><i class="fa-solid fa-hat-wizard fa-beat-fade fa-lg"></i> Welcome, <%= current_user.fullname %></h2>
 
-  <h3 class="mb-3">Here is your activities</h3>
+  <h3 id="activities" class="mb-3">Here are your activities:</h3>
 
-  <%= render 'activities/partials/cards_activities' %>
+
+  <div class="cards">
+    <%= render 'activities/partials/cards_activities' %>
+  </div>
 
   <%= link_to 'Add one' '<i class="fa-solid fa-wand-sparkles" style="color: #5a5d63;"></i>'.html_safe, new_activity_path, class: "btn btn-ghost d-grid gap-2 col-2 mx-auto mt-5" %>
 </div>
