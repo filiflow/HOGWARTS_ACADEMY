@@ -1,0 +1,13 @@
+<% @activities.each do |activity| %>
+  <div class="card-activity">
+    <img class="image-activity" src="https://images.unsplash.com/photo-1547756536-cde3673fa2e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2441&q=80" />
+    <div class="card-activity-info">
+      <div>
+        <h2><%= link_to activity.title, activity_path(activity), method: :get %></h2>
+        <p><%= activity.summary %></p>
+      </div>
+      <h2 class="cards-pricing"> £<%= activity.price %></h2>
+      <img src="https://fyooyzbm.filerobot.com/v7/capture+d%27%C3%A9cran+du+film-8ae4tfo3.webp?vh=6b10e7&ci_seal=40952d949b&w=480&h=382&gravity=auto&func=crop" class="cards-user avatar-bordered" />
+    </div>
+  </div>
+<% end %>
