@@ -1,0 +1,40 @@
+.form-container{
+  font-weight: bold;
+  width: 500px;
+  height: 750px;
+  background-image: asset-url("castle.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 10px 5px 5px grey;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 10px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+    h1{
+      color: white;
+      text-align: center;
+    }
+    label{
+      color: white;
+    }
+}
+.button-container{
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  .my-button{
+    // font-weight: bold;
+    color: black;
+    background-color: rgb(235, 221, 221);
+    border-radius: 25px;
+    text-align: center;
+    // box-shadow: 10px 5px 5px grey;
+    padding: 10px 15px;
+    margin: 0 auto;
+  }
+}
+.input-case{
+  color: black;
+}
