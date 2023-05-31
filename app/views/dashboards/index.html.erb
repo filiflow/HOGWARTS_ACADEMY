@@ -1,7 +1,13 @@
 <div class="container mt-5 mb-3">
+
   <h2 class="mb-4">Welcome, <%= current_user.fullname %></h2>
+
   <h3 class="mb-3">My activities</h3>
+
   <%= render 'shared/partials/cards_activities' %>
 
   <%= link_to 'Add a new activity', new_activity_path, class: "mt-5" %>
 </div>
+
+
+<a class="btn btn-ghost d-grid gap-2 col-2 mx-auto" href="#">RESERVIUS:baguette_magique:</a>
