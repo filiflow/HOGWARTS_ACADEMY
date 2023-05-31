@@ -2,7 +2,7 @@
 <div class="container">
   <%= simple_form_for(@activity) do |f| %>
     <%= f.input :title %>
-    <%= f.input :theme %>
+    <%= f.input :theme, collection: ["Sports", "Charms", "Alchemy", "Nature", "Transports", "Charms", "Defence Against the Dark Arts", "Make butterbeer", "Herbology", "Alchemy"]%>
     <%= f.input :price %>
     <%= f.input :date %>
     <%= f.input :summary %>
