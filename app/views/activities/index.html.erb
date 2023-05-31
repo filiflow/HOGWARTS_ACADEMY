@@ -14,4 +14,10 @@
   Join us now and let yourself be enchanted by the infinite possibilities that await with just a simple click. Unveil the secret world of magic and create magical memories that will last a lifetime.</p>
 </div>
 
-<%= render 'activities' %>
+<%= turbo_frame_tag "activities" do %>
+  <div class="container">
+    <div class="cards">
+      <%= render @activities %>
+    </div>
+  </div>
+<% end %>
