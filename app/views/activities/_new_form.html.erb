@@ -1,0 +1,29 @@
+<div class="form-container">
+  <h1>NEW ACTIVITY</h1>
+  <%= simple_form_for(@activity) do |f| %>
+  <div class="input-case">
+    <%= f.input :title %>
+  </div>
+  <div class="input-case">
+    <%= f.input :theme %>
+  </div>
+  <div class="input-case">
+    <%= f.input :price %>
+  </div>
+  <div class="input-case">
+    <%= f.input :date %>
+  </div>
+  <div class="input-case">
+    <%= f.input :summary %>
+  </div>
+  <div class="input-case">
+    <%= f.input :description %>
+  </div>
+  <div class="input-case">
+    <%= f.input :photo, as: :file %>
+  </div>
+    <div class="button-container">
+      <%= f.submit class: "my-button"%>
+    </div>
+  <% end %>
+</div>
