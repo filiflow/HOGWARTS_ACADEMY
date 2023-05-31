@@ -1,11 +1,15 @@
 <div class="container mb-5">
   <div class="search">
-    <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+    <%= simple_form_for :search, url: root_path, method: :get, data: { turbo_frame: "activities" } do |f| %>
       <div class="search-form-control form-group">
-        <input class="form-control string required" placeholder="Sports" type="text" name="search[query]" id="search_query" />
-        <button name="button" type="submit" class="btn btn-flat">
-          <i class="fas fa-search"></i> Search
-        </button>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Type a keyword"
+          %>
+          <%= button_tag "Search", name: "", class:'btn btn-flat' do %>
+            <i class="fas fa-search"></i> Search
+          <% end %>
       </div>
     <% end %>
   </div>

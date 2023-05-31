@@ -1,0 +1,13 @@
+<h1>NEW ACTIVITY</h1>
+<div class="container">
+  <%= simple_form_for(@activity) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :theme %>
+    <%= f.input :price %>
+    <%= f.input :date %>
+    <%= f.input :summary %>
+    <%= f.input :description %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit %>
+  <% end %>
+</div>
