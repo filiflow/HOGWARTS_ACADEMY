@@ -9,7 +9,7 @@ class ActivitiesController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.turbo_stream { render turbo_stream: turbo_stream.replace("activities", partial: "activities/activity", collection: @activities, as: :activity) }
+      format.turbo_stream { render turbo_stream: turbo_stream.update(:activities, partial: "activities/activity", collection: @activities, as: :activity) }
     end
   end
 
