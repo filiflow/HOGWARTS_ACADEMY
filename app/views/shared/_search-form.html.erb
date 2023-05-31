@@ -1,6 +1,6 @@
 <div class="container mb-5">
   <div class="search">
-    <%= simple_form_for :search, url: root_path, method: :get, remote: true do |f| %>
+    <%= simple_form_for :search, url: root_path, method: :get, data: { turbo_frame: "activities" } do |f| %>
       <div class="search-form-control form-group">
           <%= text_field_tag :query,
             params[:query],

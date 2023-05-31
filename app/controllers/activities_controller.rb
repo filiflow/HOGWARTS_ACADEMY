@@ -6,6 +6,17 @@ class ActivitiesController < ApplicationController
     else
       @activities = Activity.all
     end
+
+    respond_to do |format|
+      format.html
+      format.turbo_stream { render turbo_stream: turbo_stream.replace("activities", partial: "activities/activity", collection: @activities, as: :activity) }
+    end
+
+    # if turbo_frame_request?
+    #   render partial: "activities", locals: { activities: @activities }
+    # else
+    #   render "index"
+    # end
   end
 
   def show
