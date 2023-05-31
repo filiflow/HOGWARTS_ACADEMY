@@ -24,12 +24,12 @@ User.new(fullname: "Luna Lovegood", email: "luna@hogwarts.com", password: "azert
 puts "create activities"
 
 activity = Activity.new(user: User.all.sample, title: "Quidditch training", theme: "Sports", price: "12", date: Date.new(2023,6,3), summary: "Come play with Harry", description: "Golden snitch catch training with Harry")
-file = URI.open("PHOTO_LINK")
-activity.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+file = URI.open("https://images.unsplash.com/photo-1607942917525-b5a1ae53d720?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=872&q=80")
+activity.photo.attach(io: file, filename: "quidditch.png", content_type: "image/png")
 activity.save!
 
 activity = Activity.new(user: User.all.sample, title: "Sortilège reviews", theme: "Charms", price: "10", date: Date.new(2023,6,12), summary: "Reviews with Hermionne", description: "I will help you for your exams")
-file = URI.open("PHOTO_LINK")
+file = URI.open("https://images.unsplash.com/photo-1490332695540-5acc256ec383?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80")
 activity.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 activity.save!
 
