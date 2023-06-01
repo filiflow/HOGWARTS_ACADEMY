@@ -1,6 +1,8 @@
 <% @activities.each do |activity| %>
   <div class="card-activity">
-    <img class="image-activity" src="https://images.unsplash.com/photo-1547756536-cde3673fa2e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2441&q=80" />
+
+    <%= cl_image_tag activity.photo.key, height: 300, width: 400, crop: :fill %>
+
     <div class="card-activity-info">
       <div>
         <h2><%= link_to activity.title, activity_path(activity), method: :get %></h2>
