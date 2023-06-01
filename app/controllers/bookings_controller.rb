@@ -1,12 +1,4 @@
 class BookingsController < ApplicationController
-  def index
-    @bookings = Booking.where(user: current_user)
-  end
-
-  def show
-    @booking = Booking.find(params[:id])
-  end
-
   def new
     @activity = Activity.find(params[:activity_id])
     @booking = Booking.new
@@ -23,6 +15,8 @@ class BookingsController < ApplicationController
 
   def destroy
     @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to dashboards_path
   end
 
 end
