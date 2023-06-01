@@ -1,16 +1,21 @@
-<div class="show-container" style="text-align: center">
-      <%= cl_image_tag @activity.photo.key, height: 300, width: 400, crop: :fill %>
 
-      <h2><%= @activity.title %></h2>
+<div class="show-background">
+
+  <div class="show-container" style="text-align: center">
+
+
+    <h2 id="title"><%= @activity.title %></h2>
 
       <div class="text-container">
+    <%= cl_image_tag @activity.photo.key, height: 300, width: 400, crop: :fill %>
         <p id="theme"><%= @activity.theme %></p>
         <p id="date">📅<%= @activity.date %></p>
-        <p><%= @activity.description %></p>
-        <h2 class="card-trip-pricing mb-4"><%= @activity.price %>$</h2>
-
+        <p id="description"><%= @activity.description %></p>
+        <h2 id="price" class="card-trip-pricing mb-4"><%= @activity.price %>$</h2>
       </div>
 
+    <a class="btn btn-ghost d-grid gap-2 col-3 mx-auto" href="#">RESERVIUS🪄</a>
 
-      <a class="btn btn-ghost d-grid gap-2 col-3 mx-auto" href="#">RESERVIUS🪄</a>
+  </div>
+
 </div>
