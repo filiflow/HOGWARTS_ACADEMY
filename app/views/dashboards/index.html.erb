@@ -6,5 +6,19 @@
 
   <%= render 'activities/partials/cards_activities_users' %>
 
+  <% @bookings.each do |booking| %>
+    <li>
+      <%= booking.activity.title %>
+    </li>
+  <% end %>
+
+  <% @bookings.each do |booking| %>
+    <li>
+      <%= booking.activity.title %>
+      <%= link_to 'delete', booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+    </li>
+  <% end %>
+
   <%= link_to 'Add one' '<i class="fa-solid fa-wand-sparkles" style="color: #5a5d63;"></i>'.html_safe, new_activity_path, class: "btn btn-ghost d-grid gap-2 col-2 mx-auto mt-5" %>
+
 </div>
