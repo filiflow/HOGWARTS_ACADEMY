@@ -7,6 +7,6 @@
       <p>📅<%= @activity.date %></p>
       <p><%= @activity.description %></p>
       <h2 class="card-trip-pricing">💸<%= @activity.price %></h2>
-      <a class="btn btn-ghost d-grid gap-2 col-2 mx-auto" href="#">RESERVIUS🪄</a>
+      <%= link_to "RESERVIUS🪄", new_activity_booking_path(@activity), class: "btn btn-ghost d-grid gap-2 col-2 mx-auto" %>
   </div>
 </div>

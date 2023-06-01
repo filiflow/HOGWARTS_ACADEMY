@@ -1,0 +1,7 @@
+<h1>Bookings#index</h1>
+
+<% @bookings.each do |booking| %>
+  <li>
+    <%= link_to booking.activity.title, booking_path(booking) %>
+  </li>
+<% end %>
