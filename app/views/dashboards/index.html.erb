@@ -2,12 +2,9 @@
 
    <h2 id="welcome" class="mb-4"><i class="fa-solid fa-hat-wizard fa-beat-fade fa-lg"></i> Welcome, <%= current_user.fullname %></h2>
 
-  <h3 id="activities" class="mb-3">Here are your activities:</h3>
+  <h3 id="activities" class="mb-3 font-dancing">Here are your activities:</h3>
 
-
-  <div class="cards">
-    <%= render 'activities/partials/cards_activities_users' %>
-  </div>
+  <%= render 'activities/partials/cards_activities_users' %>
 
   <% @bookings.each do |booking| %>
     <li>

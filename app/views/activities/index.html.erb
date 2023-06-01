@@ -1,11 +1,12 @@
 <%= render 'shared/partials/banner' %>
 
-<%= render 'shared/partials/search_form' %>
+<div data-controller="searchbar">
+  <%= render 'shared/partials/search_form' %>
 
-<%= turbo_frame_tag :activities, target: "_top" do %>
-  <div class="container">
-    <div class="cards">
+  <%= turbo_frame_tag :activities, target: "_top" do %>
+    <div class="container">
       <%= render 'activities/partials/cards_activities' %>
     </div>
-  </div>
-<% end %>
+  <% end %>
+
+</div>
