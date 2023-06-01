@@ -1,0 +1,19 @@
+<div data-searchbar-target= "list">
+  <div class="cards">
+    <% @activities.each do |activity| %>
+      <div class="card-activity">
+
+        <%= cl_image_tag activity.photo.key, height: 300, width: 400, crop: :fill %>
+
+        <div class="card-activity-info">
+          <div>
+            <h2><%= link_to activity.title, activity_path(activity), method: :get %></h2>
+            <p><%= activity.summary %></p>
+          </div>
+          <h2 class="cards-pricing"> £<%= activity.price %></h2>
+          <img src="https://fyooyzbm.filerobot.com/v7/capture+d%27%C3%A9cran+du+film-8ae4tfo3.webp?vh=6b10e7&ci_seal=40952d949b&w=480&h=382&gravity=auto&func=crop" class="cards-user avatar-bordered" />
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
