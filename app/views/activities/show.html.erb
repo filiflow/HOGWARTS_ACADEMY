@@ -2,20 +2,17 @@
 <div class="show-background">
 
   <div class="show-container" style="text-align: center">
-
-
     <h2 id="title"><%= @activity.title %></h2>
 
       <div class="text-container">
-    <%= cl_image_tag @activity.photo.key, height: 300, width: 400, crop: :fill %>
+        <%= cl_image_tag @activity.photo.key, height: 300, width: 400, crop: :fill %>
         <p id="theme"><%= @activity.theme %></p>
         <p id="date">📅<%= @activity.date %></p>
         <p id="description"><%= @activity.description %></p>
         <h2 id="price" class="card-trip-pricing mb-4"><%= @activity.price %>$</h2>
       </div>
-
-    <a class="btn btn-ghost d-grid gap-2 col-3 mx-auto" href="#">RESERVIUS🪄</a>
-
+        
+     <%= link_to "RESERVIUS🪄", new_activity_booking_path(@activity), class: "btn btn-ghost d-grid gap-2 col-3 mx-auto" %>
   </div>
 
 </div>
