@@ -2,17 +2,18 @@
 
   <h2 id="welcome" class="mb-4"><i class="fa-solid fa-hat-wizard fa-beat-fade fa-lg"></i> Welcome, <%= current_user.fullname %></h2>
 
-  <h3 id="activities" class="mb-3 font-dancing">Here are your activities:</h3>
+  <div class="row">
+    <div class="col-6">
+      <h3 id="activities" class="mb-3 font-dancing">Here are the activities you posted :</h3>
+      <%= render 'activities/partials/cards_activities_users' %>
+    </div>
+    <div class="col-6">
+      <h3 id="activities" class="mb-3 font-dancing">Here are the activities you have signed up to :</h3>
+      <%= render 'activities/partials/bookings' %>
+    </div>
+  </div>
 
-  <%= render 'activities/partials/cards_activities_users' %>
 
-  <% @bookings.each do |booking| %>
-    <li>
-      <%= booking.activity.title %>
-      <%= link_to 'delete', booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-    </li>
-  <% end %>
-
-  <%= link_to 'Add one' '<i class="fa-solid fa-wand-sparkles" style="color: #5a5d63;"></i>'.html_safe, new_activity_path, class: "btn btn-ghost d-grid gap-2 col-2 mx-auto mt-5" %>
+  <%= link_to 'Post a new activity' '<i class="fa-solid fa-wand-sparkles" style="color: #5a5d63;"></i>'.html_safe, new_activity_path, class: "btn btn-ghost d-grid gap-2 col-2 mx-auto mt-3 mb-4" %>
 
 </div>

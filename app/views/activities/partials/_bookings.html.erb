@@ -1,0 +1,18 @@
+<div class="cards">
+  <% @bookings.each do |booking| %>
+    <div class="card-activity">
+      <%= cl_image_tag booking.activity.photo.key, height: 300, width: 400, crop: :fill %>
+        <div class="card-activity-info">
+          <div>
+            <h2><%= link_to booking.activity.title, activity_path(booking.activity) %></h2>
+            <p><%= booking.activity.summary %></p>
+          </div>
+          <div class="container mb-2">
+            <div class="action-icons">
+              <%= link_to '<i class="fa-regular fa-trash-can" style="color: #000000;"></i>'.html_safe, booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+            </div>
+          </div>
+        </div>
+    </div>
+  <% end %>
+</div>
