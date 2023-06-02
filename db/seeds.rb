@@ -50,7 +50,7 @@ activity.photo.attach(io: file, filename: "dumbledore.png", content_type: "image
 activity.save!
 
 activity = Activity.new(user: User.all.sample, title: "Divination", theme: "Charms", price: "1", date: Date.new(2023,7,5), summary: "We'll see your future... in a bowling bowl !!", description: "Divination is in charms category because i don't really know what it is.")
-file = URI.open("https://images.unsplash.com/photo-1670525576770-152b666e2d84?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=388&q=80")
+file = URI.open("https://static.wikia.nocookie.net/harrypotter/images/1/19/Divination_par_boule_de_cristal.jpg/revision/latest?cb=20160606121342&path-prefix=fr")
 activity.photo.attach(io: file, filename: "bowl.png", content_type: "image/png")
 activity.save!
 
