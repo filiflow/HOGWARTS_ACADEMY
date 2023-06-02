@@ -1,4 +1,5 @@
 <div class="show-container" style="text-align: center">
+
   <%= cl_image_tag @activity.photo.key, height: 300, width: 400, crop: :fill %>
 
   <h2><%= @activity.title %></h2>
@@ -11,7 +12,10 @@
 
   </div>
 
-  <%# <%= link_to "RESERVIUS🪄", new_activity_booking_path(@activity), class: "btn btn-ghost d-grid gap-2 col-2 mx-auto", "data-toggle" "modal", "data-target" '#loginModal' %> %>
-  <%= link_to "RESERVIUS🪄", "#", class: "btn btn-ghost d-grid gap-2 col-2 mx-auto", "data-toggle": "modal", "data-target": "#loginModal" %>
+  <button type="button" class="btn btn-ghost d-grid gap-2 col-2 mx-auto" data-bs-toggle="modal" data-bs-target="#login-modal">
+  RESERVIUS🪄
+</button>
+
   <%= render 'bookings/modal' %>
+
 </div>
