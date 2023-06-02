@@ -1,29 +1,31 @@
-<div class="form-container">
-  <h1>NEW ACTIVITY</h1>
-  <%= simple_form_for(@activity) do |f| %>
-  <div class="input-case">
-    <%= f.input :title %>
-  </div>
-  <div class="input-case">
-    <%= f.input :theme %>
-  </div>
-  <div class="input-case">
-    <%= f.input :price %>
-  </div>
-  <div class="input-case calendar-position">
-    <%= f.input :date, html5: true %>
-  </div>
-  <div class="input-case">
-    <%= f.input :summary %>
-  </div>
-  <div class="input-case">
-    <%= f.input :description %>
-  </div>
-  <div class="input-case">
-    <%= f.input :photo, as: :file %>
-  </div>
-    <div class="button-container">
-      <%= f.submit class: "my-button"%>
+<div class="show-background">
+  <div class="form-container">
+    <h1>ADDUM ACTIVITIS</h1>
+    <%= simple_form_for(@activity) do |f| %>
+    <div class="input-case">
+      <%= f.input :title, label: false, placeholder: "Activity title" %>
     </div>
-  <% end %>
+    <div class="input-case">
+      <%= f.input :theme, label: false, placeholder: "Activity theme"  %>
+    </div>
+    <div class="input-case">
+      <%= f.input :price, label: false, placeholder: "Your Price"  %>
+    </div>
+    <div class="input-case calendar-position">
+      <%= f.input :date, html5: true, label: false %>
+    </div>
+    <div class="input-case">
+      <%= f.input :summary, label: false, placeholder: "Activity summary"  %>
+    </div>
+    <div class="input-case">
+      <%= f.input :description, label: false, placeholder: "Activity Description"  %>
+    </div>
+    <div class="input-case">
+      <%= f.input :photo, as: :file, label: false %>
+    </div>
+    <div class="button-container">
+      <%= f.submit value: "PROPOSITUM 🪄", class: "btn btn-ghost-dashboard mt-3 mb-4"%>
+    </div>
+    <% end %>
+  </div>
 </div>
