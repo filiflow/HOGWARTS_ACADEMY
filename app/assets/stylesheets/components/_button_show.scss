@@ -1,4 +1,6 @@
 .btn-ghost {
+  z-index: 1;
+
   color: #4A4A4A;
   border: 1px solid #4A4A4A;
   padding: 8px 24px;
@@ -11,10 +13,12 @@
   justify-content: center;
 }
 .btn-ghost:hover {
+  z-index: 1;
   opacity: 1;
 }
 
 .btn-ghost-dashboard {
+  z-index: 1;
   color: white;
   border: 1px solid white;
   padding: 8px 24px;
