@@ -24,7 +24,7 @@ User.new(fullname: "Luna Lovegood", email: "luna@hogwarts.com", password: "azert
 
 puts "╭∩╮(-_-)╭∩╮"
 
-puts " ║▌║█║▌│║▌║▌█ ACTIVITY en cours de Création ║▌║█║▌│║▌║▌█ "
+puts " On a faim !  "
 puts ""
 puts "mange un cookie en attendant!"
 puts "༼ つ ◕_◕ ༽つ🍪"
