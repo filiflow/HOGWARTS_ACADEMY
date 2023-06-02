@@ -5,17 +5,20 @@
 
       <div class="text-container">
         <%= cl_image_tag @activity.photo.key, height: 300, width: 400, crop: :fill %>
-        <p id="theme"><%= @activity.theme %></p>
+        <p id="theme"><%= @activity.theme.upcase %></p>
         <p id="date">📅<%= @activity.date %></p>
         <p id="description"><%= @activity.description %></p>
-        <h2 id="price" class="card-trip-pricing mb-4"><%= @activity.price %>$</h2>
+        <h2 id="price" class="card-trip-pricing mb-4"><%= @activity.price %>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEI0lEQVR4nO2WW2xTdRzHf6fn1nPW07U9bU9vW9v19Da7lboxRzeHoQNGloxuyURTYA7KgxGJsiUm7sHL4oPGEDWaTGeEBwNm0UAG6ujantN2F3RUZC8KCDF4iS+8KEaJeMmZLIHZy2nVBxN/yfepv/4+53f7//8A/2HTA4D13wquAoBRBEHeAoDdAEABAAIA+0NmejZczwi1JHaMpbGjDIGdBgDnPwEldBR+8vU++4Vc3HdzvNuSbzRQSRernB3baP54fp/v91Wlhj3XWQp7HwDIqkAKBTyFIMgLANADAE88G7HkbwcUUi7u+9WmIaRsPdVmeP/BsPFMYsj9w0iYW3x6k+VsOaik8YhlCUGQVwBAUy2YViuxyYHGWvHUTv5aMdDJGH9tcrv94gMBbcbFklmHCV3kGGLJq6dSCoD98DcsjiDIdRxVfOkx42KLGxfvduNCZ4BIRUJ4oncDPltDKT5rb0QzFIFcuoujsqeH3D9KHxX1a1IAEKsGui1opjMf7uK/P9zv+OJeByN4DWTWb1Kmm61kprWOmllnoTMelsriGPKNVqVYTg97f769IvV/9ltdCZSyqonknIy+8kYibTUozg50EeJoB3fHhB/qsZ0DgJ2VgLePbTSVneL3Hmy4Gu0k0iyD5iVwq7Umu3bKGSU6IZuKosjLySHPHWUrpEfbjdmJEfqjTjuT442EELRQ4lofh5Z8VzZYR2NTctZnm1ud3LUFF57ZZPn07UHnlTei9ktrfZq4mhnZYKuaPFEKmNnj+WW1hzxLLmT2em8W8w3bmeSto7W8WdXk8TKZCscGnV8FODpTrioddiZ161wvbwYV9k7RY3Gf77dYs05kSPQ8hSk+9xup3GaX+i+9XVWXYwVMy8ACqEnsSLFAfiM1d6CdW5AuiYNhbvG5iPVcqYzDdpUExmWBUQR5KTnsvrE2yHSM/04qr5R1k4lOHx10Xu311JYs93rbClhejwHgwGTUcblQoMc3cAsBI51Wkegyz1I5ClNcGLvPvFQM3GJVScMl23qf7DKXvJFGwtz8eMSSd7Ok2GZTCUcGnFcK+UmPhErArbFm3Xwp8KGtdecfbjPO+Q2UuJlXCxN99ouF/Jo4KlEJ2NXv1+YKBZKuwKkdDV8/v8X2idRvHYXlu3lGKPaBQRMtf48BIFQs4xd76pajPo0g7XKvt1YMWWhxakfDt8XAD4X0ghRPLnjrI22GM+UOB0mH+52XU3u8PxX7XXqD6Wh8Wu5KPfZm1FFwWKpRn2/lURAoSzXU4Mfl3MXllNnruRFvYUUCR1+TVWeGxE7sXqfLjXaY5uOt+lx3A5MOmuiUi1Um6jXkB3YteUqSQ6uc5vXKWUkevXImaKETTSZacLPKGemiUeLoq9JqQgWGAcA9ANANAOsBwFTJn/83KGJ/AEy2TCIVC1TEAAAAAElFTkSuQmCC">
+        </h2>
       </div>
-        
-     <button type="button" class="btn btn-ghost d-grid gap-2 col-2 mx-auto" data-bs-toggle="modal" data-bs-target="#login-modal">
-        RESERVIUS🪄
-     </button>
+      <div class="button-reservius">
+        <button type="button" class="btn btn-ghost mt-3 mb-4 " data-bs-toggle="modal" data-bs-target="#login-modal">
+            RESERVIUS🪄
+        </button>
+      </div>
 
      <%= render 'bookings/modal' %>
   </div>
-  
+
 </div>
