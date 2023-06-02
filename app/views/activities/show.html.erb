@@ -8,14 +8,14 @@
         <p id="theme"><%= @activity.theme %></p>
         <p id="date">📅<%= @activity.date %></p>
         <p id="description"><%= @activity.description %></p>
-        <h2 id="price" class="card-trip-pricing mb-4"><%= @activity.price %>$</h2>
+        <h2 id="price" class="card-trip-pricing mb-4"><%= @activity.price %> </h2>
       </div>
-        
+
      <button type="button" class="btn btn-ghost d-grid gap-2 col-2 mx-auto" data-bs-toggle="modal" data-bs-target="#login-modal">
         RESERVIUS🪄
      </button>
 
      <%= render 'bookings/modal' %>
   </div>
-  
+
 </div>
