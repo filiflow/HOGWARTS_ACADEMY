@@ -7,10 +7,12 @@
             <h2><%= link_to booking.activity.title, activity_path(booking.activity) %></h2>
             <p><%= booking.activity.summary %></p>
           </div>
-          <div class="container mb-2">
-            <div class="action-icons">
-              <%= link_to '<i class="fa-regular fa-trash-can" style="color: #000000;"></i>'.html_safe, booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-            </div>
+          <h2 class="cards-pricing"> £<%= booking.activity.price %></h2>
+          <img src="https://fyooyzbm.filerobot.com/v7/capture+d%27%C3%A9cran+du+film-8ae4tfo3.webp?vh=6b10e7&ci_seal=40952d949b&w=480&h=382&gravity=auto&func=crop" class="cards-user avatar-bordered" />
+        </div>
+        <div class="container mb-2">
+          <div class="action-icons">
+            <%= link_to '<i class="fa-regular fa-trash-can" style="color: #000000;"></i>'.html_safe, booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
           </div>
         </div>
     </div>
