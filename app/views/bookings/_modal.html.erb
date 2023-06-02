@@ -2,12 +2,12 @@
   <div class="modal-dialog">
     <div class="modal-content modal-container">
       <div class="modal-header">
-        <h5 class="modal-title title-modal" id="exampleModalLabel">New booking</h5>
+        <h5 class="modal-title title-modal" id="exampleModalLabel">Confirmatum ?</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <!-- Contenu de la modal -->
-        <%= button_to "CONFIRMATUM 🪄",activity_bookings_path(@activity.id), class: "btn btn-ghost d-grid gap-2 col-2 mx-auto" %>
+        <%= button_to "Yes 🪄",activity_bookings_path(@activity.id), class: "btn btn-ghost-modal" %>
       </div>
     </div>
   </div>
