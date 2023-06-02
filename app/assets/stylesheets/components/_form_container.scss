@@ -1,40 +1,30 @@
 .form-container{
+  z-index: 1;
   font-weight: bold;
   width: 500px;
-  height: 750px;
-  background-image: asset-url("castle.jpg");
+  background-color: rgba(0, 0, 0, 0.5);
+  // background-image: asset-url("castle.jpg");
   background-size: cover;
   background-position: center;
-  box-shadow: 10px 5px 5px grey;
+  // box-shadow: 10px 5px 5px grey;
   border: 1px solid grey;
   border-radius: 10px;
   padding: 10px;
+  padding-bottom: 35px;
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
     h1{
-      color: white;
+      color: whitesmoke;
       text-align: center;
+
     }
     label{
-      color: white;
+      opacity: 0;
     }
-}
-.button-container{
-  width: 100%;
-  text-align: center;
-  margin: auto;
-  .my-button{
-    // font-weight: bold;
-    color: black;
-    background-color: rgb(235, 221, 221);
-    border-radius: 25px;
-    text-align: center;
-    // box-shadow: 10px 5px 5px grey;
-    padding: 10px 15px;
-    margin: 0 auto;
-  }
 }
 .input-case{
   color: black;
+  opacity: 0.7;
+  padding: 14px;
 }
