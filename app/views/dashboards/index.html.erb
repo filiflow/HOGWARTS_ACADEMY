@@ -1,5 +1,8 @@
 <div class="dashboard-background">
+
   <div class="container">
+    <%= render 'shared/navbar_transparent' %>
+
     <h2 class="welcome mt-5 mb-4"><i class="fa-solid fa-hat-wizard fa-beat-fade fa-lg"></i> Welcome, <%= current_user.fullname %></h2>
 
     <div class="row gap-1">
@@ -15,5 +18,6 @@
 
       </div>
     </div>
+    <%= render 'shared/partials/footer_transparent' %>
   </div>
 </div>

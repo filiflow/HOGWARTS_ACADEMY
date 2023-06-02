@@ -1,6 +1,7 @@
-.navbar-lewagon {
+.navbar-transparent {
   justify-content: space-between;
-  background: rgb(238, 228, 228);
+  // background: rgb(238, 228, 228);
+  background: transparent;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -8,12 +9,12 @@
   font-family: harryp;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-transparent .navbar-collapse {
   flex-grow: 0;
   font-size: 25px;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-transparent .navbar-brand img {
   width: 70px;
 }
 
