@@ -1,5 +1,5 @@
 #welcome {
-  font-family: 'Dancing Script', cursive;
+  font-family: harryp;
   font-size: 60px;
 }
 
@@ -9,4 +9,52 @@
 
 .font-dancing{
   font-family: 'Dancing Script', cursive;
+}
+
+.dashboard-background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://images.pexels.com/photos/1367192/pexels-photo-1367192.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-position: left center;
+  background-size: cover;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  font-smooth: auto;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #444;
+
+  &:before, &:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 50%;
+    background-size: cover;
+  }
+
+  &:before {
+    top: 0;
+    left: 0;
+    background-image: url('https://github.com/joshuaward/codepen-images/blob/master/clouds-left.png?raw=true');
+    animation: clouds1 110s linear infinite;
+  }
+
+  &:after {
+    bottom: 0;
+    left: 0;
+    background-image: url('https://github.com/joshuaward/codepen-images/blob/master/clouds-right.png?raw=true');
+    animation: clouds2 100s linear infinite;
+  }
+
+  @keyframes clouds1 {
+    to { background-position: 200%; }
+  }
+
+  @keyframes clouds2 {
+    to { background-position: -200%; }
+  }
 }

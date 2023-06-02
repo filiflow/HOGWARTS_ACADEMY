@@ -1,21 +1,21 @@
-<div class="show-container" style="text-align: center">
+<div class="show-background">
 
-  <%= cl_image_tag @activity.photo.key, height: 300, width: 400, crop: :fill %>
+  <div class="show-container" style="text-align: center">
+    <h2 id="title"><%= @activity.title %></h2>
 
-  <h2><%= @activity.title %></h2>
+      <div class="text-container">
+        <%= cl_image_tag @activity.photo.key, height: 300, width: 400, crop: :fill %>
+        <p id="theme"><%= @activity.theme %></p>
+        <p id="date">📅<%= @activity.date %></p>
+        <p id="description"><%= @activity.description %></p>
+        <h2 id="price" class="card-trip-pricing mb-4"><%= @activity.price %>$</h2>
+      </div>
+        
+     <button type="button" class="btn btn-ghost d-grid gap-2 col-2 mx-auto" data-bs-toggle="modal" data-bs-target="#login-modal">
+        RESERVIUS🪄
+     </button>
 
-  <div class="text-container">
-    <p id="theme"><%= @activity.theme %></p>
-    <p id="date">📅<%= @activity.date %></p>
-    <p><%= @activity.description %></p>
-    <h2 class="card-trip-pricing mb-4"><%= @activity.price %>$</h2>
-
+     <%= render 'bookings/modal' %>
   </div>
-
-  <button type="button" class="btn btn-ghost d-grid gap-2 col-2 mx-auto" data-bs-toggle="modal" data-bs-target="#login-modal">
-  RESERVIUS🪄
-</button>
-
-  <%= render 'bookings/modal' %>
-
+  
 </div>
